@@ -7,4 +7,7 @@ public class HotelCollectionDto {
 
     public HotelCollectionDto() {
     }
+
+    public HotelCollectionDto(List<HotelDto> hotelDto) {
+    }
 }
