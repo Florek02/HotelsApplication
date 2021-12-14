@@ -21,7 +21,7 @@ public class ReservationController {
     @GetMapping
     public ResponseEntity<ReservationStatusDto> getOrders(@RequestParam("status") ReservationStatusType reservationStatusType, @RequestHeader("Access-Token") String token ){
         RoomReservationDto roomReservationDto = new RoomReservationDto(3,1,14);
-        PersonReservationDto personReservationDto = new PersonReservationDto("Jakub Florczak","691655789","Parmegiana 30",1);
+        PersonReservationDto personReservationDto = new PersonReservationDto("Jan Kowalski","123456","Branickiego 34/2",1);
         ReservationDto reservationDto = new ReservationDto(1,NEW, List.of(roomReservationDto),personReservationDto);
         ReservationStatusDto reservationStatusDto = new ReservationStatusDto(List.of(reservationDto));
         return ResponseEntity.ok(reservationStatusDto);
